@@ -42,9 +42,9 @@
                 .then((json) => {
                     // GeoJSONレイヤーを作成
                     L.geoJSON(json)
-                    .bindPopup(layer).addTo(map);
-                    //.bindPopup((layer) => layer.feature.properties.P29_004, layer.feature.properties.P29_005) // ポップアップで住所を表示
-                    //    .addTo(map);
+                    //.bindPopup(layer).addTo(map);
+                    .bindPopup((layer) => layer.feature.properties.P29_004) // ポップアップで住所を表示
+                        .addTo(map);
                 });
 
             function layer(){
